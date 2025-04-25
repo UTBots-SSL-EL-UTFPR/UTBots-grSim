@@ -41,11 +41,11 @@ ConfigWidget::ConfigWidget() {
 
   VarListPtr game_vars(new VarList("Game"));
   geo_vars->addChild(game_vars);
-  ADD_ENUM(StringEnum, Division, "Division A", "Division")
+  ADD_ENUM(StringEnum, Division, "Division B", "Division")
   ADD_TO_ENUM(Division, "Division A");
   ADD_TO_ENUM(Division, "Division B");
   END_ENUM(game_vars, Division);
-  ADD_VALUE(game_vars,Int, Robots_Count, 11, "Robots Count")
+  ADD_VALUE(game_vars,Int, Robots_Count, 3, "Robots Count")
   ADD_VALUE(game_vars, String, ColorRobotBlue, "#0000ff", "Color Robot Blue")
   ADD_VALUE(game_vars, String, ColorRobotYellow, "#ffff00", "Color Robot Yellow")
 
@@ -73,19 +73,19 @@ ConfigWidget::ConfigWidget() {
   ADD_VALUE(div_a_vars, Double, DivA_Goal_Height,0.160,"Goal height")
 
   ADD_VALUE(div_b_vars, Double, DivB_Field_Line_Width,0.010,"Line Thickness")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Length,9.000,"Length")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Width,6.000,"Width")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Length,4.500,"Length")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Width,3.000,"Width")
   ADD_VALUE(div_b_vars, Double, DivB_Field_Rad,0.500,"Radius")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Free_Kick,0.700,"Free Kick Distance From Defense Area")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Width,2.00,"Penalty width")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Depth,1.0,"Penalty depth")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Point,6.00,"Penalty point")
-  ADD_VALUE(div_b_vars, Double, DivB_Field_Margin,0.30,"Margin")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Free_Kick,1.000,"Free Kick Distance From Defense Area")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Width,1.35,"Penalty width")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Depth,0.5,"Penalty depth")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Penalty_Point,3.00,"Penalty point")
+  ADD_VALUE(div_b_vars, Double, DivB_Field_Margin,0.50,"Margin")
   ADD_VALUE(div_b_vars, Double, DivB_Field_Referee_Margin,0.0,"Referee margin")
-  ADD_VALUE(div_b_vars, Double, DivB_Wall_Thickness,0.050,"Wall thickness")
+  ADD_VALUE(div_b_vars, Double, DivB_Wall_Thickness,0.020,"Wall thickness")
   ADD_VALUE(div_b_vars, Double, DivB_Goal_Thickness,0.020,"Goal thickness")
   ADD_VALUE(div_b_vars, Double, DivB_Goal_Depth,0.18,"Goal depth")
-  ADD_VALUE(div_b_vars, Double, DivB_Goal_Width,1.000,"Goal width")
+  ADD_VALUE(div_b_vars, Double, DivB_Goal_Width,0.800,"Goal width")
   ADD_VALUE(div_b_vars, Double, DivB_Goal_Height,0.160,"Goal height")
 
   ADD_ENUM(StringEnum,YellowTeam,"Parsian","Yellow Team");
@@ -113,7 +113,7 @@ ConfigWidget::ConfigWidget() {
         ADD_VALUE(worldp_vars,Bool,ResetTurnOver,true,"Auto reset turn-over")
   VarListPtr ballp_vars(new VarList("Ball"));
     phys_vars->addChild(ballp_vars);
-        ADD_VALUE(ballp_vars,Double,BallMass,0.043,"Ball mass");
+        ADD_VALUE(ballp_vars,Double,BallMass,0.046,"Ball mass");
         ADD_VALUE(ballp_vars,Double,BallFriction,0.05,"Ball-ground friction")
         ADD_VALUE(ballp_vars,Double,BallSlip,1,"Ball-ground slip")
         ADD_VALUE(ballp_vars,Double,BallBounce,0.5,"Ball-ground bounce factor")
